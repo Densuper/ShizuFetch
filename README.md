@@ -60,12 +60,7 @@
 <p align="center">
   <img src="assets/screen/screen1.png" width="180">
   <img src="assets/screen/screen2.png" width="180">
-  <img src="assets/screen/screen3.png" width="180">
-  <img src="assets/screen/screen4.png" width="180">
-  <img src="assets/screen/screen5.png" width="180">
-  <img src="assets/screen/screen6.png" width="180">
-  <img src="assets/screen/screen7.png" width="180">
-</p>
+  </p>
 
 ---
 
