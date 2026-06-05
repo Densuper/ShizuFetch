@@ -151,6 +151,13 @@ Read the full Contribution Guidelines for details on coding conventions and loca
 
 ---
 
+## Acknowledgments & Design Assets
+
+The user interface of Drawix Pro relies on clean and professional iconography. The icons used throughout the application are sourced from the **[Iconsax](https://github.com/glenthemes/iconsax/tree/gh-pages)** library. To ensure optimal performance, crisp scaling across all screen densities, and memory efficiency on Android, all utilized icons were converted from their original formats into native Android Vector Drawable (XML) formats.
+
+---
+
+
 📜 License
 
 This project is licensed under the MIT License – see the LICENSE file for details.
