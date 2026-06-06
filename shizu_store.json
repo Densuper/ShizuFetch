@@ -8,7 +8,7 @@
   "banner_url": "https://shizucorefetch.siwane.xyz/assets/banner_main.png",
   "app_website": "https://shizucorefetch.siwane.xyz",
   "developer": {
-    "name": "Jamal El Hizazi (جمال الحزازي)",
+    "name": "Jamal El Hizazi",
     "account_url": "https://github.com/elhizazi1",
     "email": "jamal@elhizazi.me",
     "website": "https://siwane.xyz",
@@ -37,7 +37,9 @@
       "short_description": "أداة متقدمة لإدارة وتثبيت التطبيقات عبر صلاحيات Shizuku.",
       "detailed_description": "تطبيق ShizuCoreFetch هو أداتك الشاملة لإدارة وتثبيت تطبيقات أندرويد بسلاسة. من خلال الاستفادة من صلاحيات Shizuku، يتيح لك التطبيق تجاوز قيود التثبيت التقليدية وإدارة تطبيقاتك باحترافية.\n\n**أهم المميزات:**\n- تثبيت صامت في الخلفية لملفات APK عبر Shizuku.\n- جلب وتنزيل أحدث الإصدارات مباشرة من مستودعات جيتهب.\n- محفظة تخزين محلية لإدارة، استخراج، ومشاركة ملفات التطبيقات.\n- واجهة مستخدم سريعة وعصرية تتوافق مع معايير Material Design.",
       "banner_url": "https://shizucorefetch.siwane.xyz/assets/banner_main.png",
-      "developer_message": "أسعى لصناعة أدوات ذكية تمنح المستخدم تحكماً كاملاً في هاتفه. شكراً لدعمكم وثقتكم!"
+      "developer_message": "أسعى لصناعة أدوات ذكية تمنح المستخدم تحكماً كاملاً في هاتفه. شكراً لدعمكم وثقتكم!",
+      "developer_name": "جمال الحزازي",
+      "developer_message": "أسعى لصناعة أدوات ذكية تمنح المستخدم تحكماً كاملاً في هاتفه."
     }
   }
 }
