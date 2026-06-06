@@ -1,19 +1,27 @@
 {
   "app_name": "ShizuCoreFetch",
   "package_name": "xyz.siwane.shizucorefetch",
-  
   "short_description": "An advanced Shizuku-based Android app manager and installer.",
   "detailed_description": "ShizuCoreFetch is a powerful tool designed to manage and install Android applications seamlessly. Utilizing the Shizuku API, it allows you to bypass standard installation restrictions and manage your apps like a pro.\n\n**Key Features:**\n- Silent and background APK installations via Shizuku.\n- Fetch and download the latest app releases directly from GitHub.\n- Local APK wallet for managing, extracting, and sharing apps.\n- Fast and responsive Material Design UI.",
-  
   "icon_url": "https://shizucorefetch.siwane.xyz/assets/icon.png",
   "banner_url": "https://shizucorefetch.siwane.xyz/assets/banner_main.png",
-  
+  "app_website": "https://shizucorefetch.siwane.xyz",
   "developer": {
     "name": "Jamal El Hizazi",
-    "account_url": "https://github.com/elhizazi1"
+    "account_url": "https://github.com/elhizazi1",
+    "email": "jamal@elhizazi.me",
+    "website": "https://siwane.xyz",
+    "portfolio": "https://jamal.elhizazi.me",
+    "socials": {
+      "facebook": "https://fb.com/elhizazi2",
+      "instagram": "https://instagram.com/elhizazi1",
+      "x": "https://x.com/elhizazi1",
+      "youtube": "https://youtube.com/si1xyz",
+      "github": "https://github.com/elhizazi1",
+      "telegram": "https://t.me/elhizazi1"
+    }
   },
   "repo_url": "https://github.com/elhizazi1/ShizuCoreFetch",
-  
   "screenshots": [
     "https://shizucorefetch.siwane.xyz/assets/screen/screen1.png",
     "https://shizucorefetch.siwane.xyz/assets/screen/screen2.png",
@@ -23,7 +31,6 @@
     "https://shizucorefetch.siwane.xyz/assets/screen/screen6.png",
     "https://shizucorefetch.siwane.xyz/assets/screen/screen7.png"
   ],
-  
   "locales": {
     "ar": {
       "short_description": "أداة متقدمة لإدارة وتثبيت التطبيقات عبر صلاحيات Shizuku.",
