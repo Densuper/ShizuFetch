@@ -1,0 +1,46 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="900" fill="#121212" />
+
+  <defs>
+    <linearGradient id="shimmer" x1="-100%" y1="0" x2="0%" y2="0">
+      <stop offset="0%" stop-color="#1E1E1E" />
+      <stop offset="50%" stop-color="#2C2C2C" />
+      <stop offset="100%" stop-color="#1E1E1E" />
+      <animate attributeName="x1" values="-100%; 100%" dur="1.5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="0%; 200%" dur="1.5s" repeatCount="indefinite" />
+    </linearGradient>
+
+    <mask id="typewriter_mask">
+      <rect x="0" y="0" width="1200" height="900" fill="white" />
+      
+      <rect x="0" y="520" width="1200" height="60" fill="black">
+        <animate attributeName="x" values="0; 1200" dur="2s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.4, 0, 0.2, 1" />
+      </rect>
+      <rect x="0" y="580" width="1200" height="60" fill="black">
+        <animate attributeName="x" values="0; 1200" dur="2s" begin="2.5s" fill="freeze" calcMode="spline" keySplines="0.4, 0, 0.2, 1" />
+      </rect>
+      <rect x="0" y="650" width="1200" height="50" fill="black">
+        <animate attributeName="x" values="0; 1200" dur="2s" begin="4.5s" fill="freeze" calcMode="spline" keySplines="0.4, 0, 0.2, 1" />
+      </rect>
+      <rect x="0" y="700" width="1200" height="50" fill="black">
+        <animate attributeName="x" values="0; 1200" dur="2s" begin="6.5s" fill="freeze" calcMode="spline" keySplines="0.4, 0, 0.2, 1" />
+      </rect>
+    </mask>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#shimmer)" />
+
+  <g transform="translate(550, 320) scale(4)" fill="#00d1b2">
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+  </g>
+
+  <g mask="url(#typewriter_mask)">
+    <text x="600" y="550" font-family="sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">مساحة إعلانية متاحة</text>
+    <text x="600" y="610" font-family="sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">Advertising space available</text>
+    
+    <text x="600" y="680" font-family="sans-serif" font-size="32" fill="#a0a0a0" text-anchor="middle">تواصل مع إدارة "صوان" لحجز هذه المساحة</text>
+    <text x="600" y="730" font-family="sans-serif" font-size="32" fill="#a0a0a0" text-anchor="middle">Contact Siwane management to reserve this space</text>
+  </g>
+  
+  <rect width="1196" height="896" x="2" y="2" fill="none" stroke="#333333" stroke-width="4" rx="16" />
+</svg>
