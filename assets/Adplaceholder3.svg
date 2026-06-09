@@ -1,9 +1,9 @@
 <svg width="1200" height="900" viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
-  <!-- الخلفية -->
+  <!-- الخلفية الداكنة -->
   <rect width="1200" height="900" fill="#121212" />
-  
+
+  <!-- تأثير اللمعان -->
   <defs>
-    <!-- تأثير اللمعان -->
     <linearGradient id="shimmer" x1="-100%" y1="0" x2="0%" y2="0">
       <stop offset="0%" stop-color="#1E1E1E" />
       <stop offset="50%" stop-color="#2C2C2C" />
@@ -15,86 +15,61 @@
 
   <rect width="1200" height="900" fill="url(#shimmer)" />
 
-  <!-- الأيقونة -->
+  <!-- أيقونة الإضافة -->
   <g transform="translate(550, 320) scale(4)" fill="#00d1b2">
     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
   </g>
 
-  <!-- عناصر النص (سيتم تعديلها ديناميكياً) -->
-  <text id="text-main" x="600" y="550" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff"></text>
-  <text id="text-sub" x="600" y="650" font-family="Arial, sans-serif" font-size="32" fill="#a0a0a0"></text>
+  <!-- 
+    النصوص مخفية بشكل افتراضي، وسنظهرها بالمستطيلات الكاشفة.
+    لاحظ: كل نص موضوع داخل مجموعة (g) مع visibility متحكم بها.
+  -->
+
+  <!-- النص العربي 1: مساحة إعلانية متاحة -->
+  <g>
+    <text x="600" y="550" font-family="sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">مساحة إعلانية متاحة</text>
+    <!-- المستطيل الكاشف يتحرك من اليمين إلى اليسار (RTL) -->
+    <rect x="0" y="520" width="1200" height="60" fill="#121212">
+      <animateTransform attributeName="transform" type="translate" 
+        values="0,0; -1200,0" 
+        dur="2s" begin="0.5s" repeatCount="indefinite" 
+        calcMode="linear" keyTimes="0; 1" fill="freeze" />
+    </rect>
+  </g>
+
+  <!-- النص الإنجليزي 1: Advertising space available -->
+  <g>
+    <text x="600" y="610" font-family="sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">Advertising space available</text>
+    <rect x="0" y="580" width="1200" height="60" fill="#121212">
+      <animateTransform attributeName="transform" type="translate" 
+        values="0,0; 1200,0" 
+        dur="2s" begin="3.5s" repeatCount="indefinite" 
+        calcMode="linear" keyTimes="0; 1" fill="freeze" />
+    </rect>
+  </g>
+
+  <!-- النص العربي 2: تواصل مع إدارة "صوان" لحجز هذه المساحة -->
+  <g>
+    <text x="600" y="680" font-family="sans-serif" font-size="32" fill="#a0a0a0" text-anchor="middle">تواصل مع إدارة "صوان" لحجز هذه المساحة</text>
+    <rect x="0" y="650" width="1200" height="50" fill="#121212">
+      <animateTransform attributeName="transform" type="translate" 
+        values="0,0; -1200,0" 
+        dur="2s" begin="6.5s" repeatCount="indefinite" 
+        calcMode="linear" keyTimes="0; 1" fill="freeze" />
+    </rect>
+  </g>
+
+  <!-- النص الإنجليزي 2: Contact Siwane management to reserve this space -->
+  <g>
+    <text x="600" y="730" font-family="sans-serif" font-size="32" fill="#a0a0a0" text-anchor="middle">Contact Siwane management to reserve this space</text>
+    <rect x="0" y="700" width="1200" height="50" fill="#121212">
+      <animateTransform attributeName="transform" type="translate" 
+        values="0,0; 1200,0" 
+        dur="2s" begin="9.5s" repeatCount="indefinite" 
+        calcMode="linear" keyTimes="0; 1" fill="freeze" />
+    </rect>
+  </g>
 
   <!-- الإطار الخارجي -->
   <rect width="1196" height="896" x="2" y="2" fill="none" stroke="#333333" stroke-width="4" rx="16" />
-
-  <script type="application/javascript"><![CDATA[
-    var data = [
-      { 
-        title: "مساحة إعلانية متاحة", 
-        desc: 'تواصل مع إدارة "صوان" لحجز هذه المساحة', 
-        align: "end"     // RTL: يبدأ من اليمين
-      },
-      { 
-        title: "Advertising space available", 
-        desc: "Contact Siwane management to reserve this space", 
-        align: "start"   // LTR: يبدأ من اليسار
-      }
-    ];
-
-    var mainEl = document.getElementById("text-main");
-    var subEl = document.getElementById("text-sub");
-    var index = 0;
-    var busy = false; // لمنع التداخل
-
-    // دالة كتابة حرف بحرف مع مؤشر
-    function typeText(el, text, speed, callback) {
-      var i = 0;
-      el.textContent = "";
-      function addChar() {
-        if (i < text.length) {
-          el.textContent = text.substring(0, i + 1) + "|";
-          i++;
-          setTimeout(addChar, speed);
-        } else {
-          el.textContent = text; // إزالة المؤشر بعد الانتهاء
-          if (callback) callback();
-        }
-      }
-      addChar();
-    }
-
-    // عرض جملة كاملة (عنوان + وصف)
-    function showItem(item, done) {
-      // ضبط المحاذاة حسب اللغة
-      mainEl.setAttribute("text-anchor", item.align);
-      subEl.setAttribute("text-anchor", item.align);
-
-      typeText(mainEl, item.title, 80, function() {
-        typeText(subEl, item.desc, 45, function() {
-          if (done) done();
-        });
-      });
-    }
-
-    // الانتقال إلى الجملة التالية
-    function next() {
-      if (busy) return;
-      busy = true;
-      var item = data[index % 2];
-      showItem(item, function() {
-        // بعد انتهاء الكتابة، اترك النص ظاهراً 5 ثوانٍ
-        setTimeout(function() {
-          mainEl.textContent = "";
-          subEl.textContent = "";
-          busy = false;
-          index++;
-          // فاصل قصير ثم ابدأ الجملة التالية
-          setTimeout(next, 300);
-        }, 5000);
-      });
-    }
-
-    // بدء الحلقة
-    next();
-  ]]></script>
 </svg>
