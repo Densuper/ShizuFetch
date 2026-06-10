@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <strong>An advanced, Shizuku-powered application hub and community ecosystem for Android.</strong><br>
-  Fetch, manage, review, and silently update your apps with system-level privileges — entirely open source.
+  <strong>An advanced, Shizuku-powered application hub for Android.</strong><br>
+  Fetch, manage, and silently update your apps with system-level privileges — entirely open source.
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 
 ## 📖 Overview
 
-**Shizu CoreFetch** is a next‑generation application manager and store front for Android that leverages the **Shizuku** API to perform operations without requiring root access. It comes bundled with a local **APK wallet**, a centralized repository browser, an interactive **comment & reaction community**, integrated **developer portfolios**, GitHub authentication, and a non-intrusive **ad network managed via Google Apps Script** — all wrapped in a clean, modern interface that supports light/dark themes and 9 languages.
+**Shizu CoreFetch** is a next‑generation application manager for Android that leverages the **Shizuku** API to perform silent installs, uninstalls, and background updates without requiring root access. It comes bundled with a local **APK wallet**, a centralized repository browser, GitHub authentication, and real‑time notifications — all wrapped in a clean, modern interface that supports light/dark themes and 8 languages.
 
 > ⚡ Perfect for power users, developers, and anyone tired of manual package management.
 
@@ -28,35 +28,29 @@
 
 ## ✨ Key Features
 
-- **Flexible Installation Options (New)**  
-  Toggle between **Silent Installation** using system-level Shizuku privileges, or standard Android package installer prompts directly from the settings panel.
+- **Silent Operations with Shizuku**  
+  Install, uninstall, and update apps directly at system level — no user interaction needed once permissions are granted.
 
-- **Interactive Community Hub (New)**  
-  Engage with other users by reading and writing markdown-supported comments, replying directly to feedback, and interacting using emoji reactions powered safely by GitHub Issues.
+- **Centralized Repository**  
+  Browse and fetch applications from a curated repository. Each app includes screenshots, description, developer info, and version history.
 
-- **Smart Rating System (New)**  
-  Discover top-tier apps instantly through an automated star-to-rating calculation algorithm that highlights trusted software in a dedicated **Trending Apps** section.
-
-- **Developer Portfolios (New)**  
-  Explore dedicated developer profiles inside the app. View developer bios, official websites, support emails, social links, and their entire catalog of published tools.
-
-- **Curated Monetization Ecosystem (New)**  
-  Supports beautiful, non-intrusive developer advertisements seamlessly approved and whitelisted via a robust Google Sheets panel to keep the market healthy and sustainable.
-
-- **Optimized Guest Mode (New)**  
-  Browse the store, view developer details, read changelogs, and audit version history seamlessly as a guest thanks to a dual-token fallback mechanism that bypasses GitHub Rate Limits.
-
-- **Local Storage Wallet (Improved)**  
-  Store downloaded APKs locally, share them via any app, or open them with external file viewers (such as MT Manager). Now features **accurate icon extraction** for cached packages.
+- **Local Storage Wallet**  
+  Store downloaded APKs locally, share them via any app, or open them with external file viewers. Delete packages with a single tap to free up space.
 
 - **Update Notifications**  
   Receive alerts when new versions of your installed apps become available. Background checks ensure you never miss an update.
 
+- **GitHub Integration**  
+  Sign in with your GitHub account or continue as a guest. Your installed apps and update status are tied to your profile (optional).
+
 - **Multi‑Language**  
-  Available in 9 languages: العربية, English, Français, Español, Português, Русский, हिन्दी, 中文, 日本語.
+  Available in 8 languages: العربية, English, Français, Español, Português, Русский, हिन्दी, 中文.
 
 - **Dynamic Theming**  
   Switch between Light, Dark, and System‑follow modes on the fly.
+
+- **Privacy First**  
+  100% offline‑first architecture. No tracking, no analytics, no data collection. Your apps and data stay on your device.
 
 ---
 
@@ -65,14 +59,14 @@
 <p align="center">
   <img src="assets/screen/screen1.png" width="180">
   <img src="assets/screen/screen2.png" width="180">
-</p>
+  </p>
 
 ---
 
 ## 📦 Requirements
 
 - Android 8.0+ (API 26)
-- [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api) installed and running on your device (Only required for Silent operations)
+- [Shizuku](https://play.google.com/store/apps/details?id=moe.shizuku.privileged.api) installed and running on your device
 - Network permission (for fetching app data from the repository)
 - Storage permission (for saving and sharing APK files)
 
@@ -84,22 +78,31 @@
 
 1. **Download the latest APK** from the [Releases page](https://github.com/elhizazi1/ShizuCoreFetch/releases/latest).
 2. Install the APK on your Android device (you may need to allow “Install from unknown sources”).
-3. Open **Shizuku** and start the service (if utilizing silent install/uninstall).
-4. Launch **Shizu CoreFetch** → grant permissions, and you're good to go!
+3. Open **Shizuku** and start the service.
+4. Launch **Shizu CoreFetch** → grant the Shizuku permission when prompted.
+5. You’re all set! Browse the repository or use the wallet to manage your packages.
 
 ---
 
 ## 🧠 How It Works
 
-Shizu CoreFetch bridges the gap between decentralized GitHub releases and the end-user using a high-performance serverless backend engine (Google Apps Script) coupled with native system client bindings:
+Shizu CoreFetch uses the Shizuku Binder API to execute privileged commands directly on the Android package manager. This enables:
 
+- **Silent install** (`pm install`)
+- **Silent uninstall** (`pm uninstall`)
+- **Background updates** without any pop‑ups
 
-graph TD
-    A[GAS Backend Engine] -->|Syncs & Filters| B(Google Drive Cache)
-    B -->|Serves Main Catalog Securely| C[Shizu CoreFetch App]
-    C -->|Silent Mode| D{Shizuku Binder API}
-    C -->|Standard Mode| E[Android OS Installer]
-    D --> F[Privileged pm install/uninstall]
+The app itself runs without root, making it safe and compliant with modern Android security policies.
+
+```mermaid
+graph LR
+    A[User Action] --> B{Shizuku Service}
+    B -- Binder IPC --> C[System Server]
+    C --> D[Package Manager]
+    D --> E[Install/Uninstall/Update]
+```
+
+---
 
 ## 🌍 Localization
 All user‑facing strings are translated into the following languages:
@@ -114,6 +117,9 @@ All user‑facing strings are translated into the following languages:
 | हिन्दी (Hindi) | ✅ Complete |
 | 中文 (Chinese) | ✅ Complete |
 | 日本語 (Japanese) | ✅ Complete |
+
+---
+
 ## 🛠️ Tech Stack
  * Language: Kotlin
  * UI: XML Layouts + Material Design 3 Components
@@ -122,16 +128,52 @@ All user‑facing strings are translated into the following languages:
  * Image Loading: Coil (with crossfade and rounded transformations)
  * Rich Text Rendering: Markwon Markdown Library
  * Local Caching: Gson + Shared Preferences Architecture
-## Acknowledgments & Design Assets
-The user interface of Shizu CoreFetch relies on clean and professional iconography. The icons used throughout the application are sourced from the **Iconsax** library. To ensure optimal performance, crisp scaling across all screen densities, and memory efficiency on Android, all utilized icons were converted from their original formats into native Android Vector Drawable (XML) formats.
-## 📜 License
-This project is licensed under the MIT License – see the LICENSE file for details.
-## 👤 Author & Contact
-Jamal El Hizazi
- * GitHub: @elhizazi1
- * Website: Siwane.xyz
-<p align="center">
-Made with ❤️ for the Android community
-</p>
 
 ---
+
+🤝 Contributing
+
+We welcome contributions! If you’d like to improve Shizu CoreFetch, please follow these steps:
+
+1. Fork the repo
+2. Create a feature branch (git checkout -b feature/amazing-feature)
+3. Commit your changes (git commit -m 'Add amazing feature')
+4. Push to the branch (git push origin feature/amazing-feature)
+5. Open a Pull Request
+
+Read the full Contribution Guidelines for details on coding conventions and localization.
+
+---
+
+## Acknowledgments & Design Assets
+
+The user interface of Drawix Pro relies on clean and professional iconography. The icons used throughout the application are sourced from the **[Iconsax](https://github.com/glenthemes/iconsax/tree/gh-pages)** library. To ensure optimal performance, crisp scaling across all screen densities, and memory efficiency on Android, all utilized icons were converted from their original formats into native Android Vector Drawable (XML) formats.
+
+---
+
+> ⚠️ **Notice for Developers:** The source code currently available in this repository reflects stable version **1.0.0**. The latest features mentioned below (v1.1.0) are currently available as a compiled APK in the [Releases](#) section. The open-source code will be synced with v1.1.0 soon.
+
+---
+
+
+📜 License
+
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+---
+
+👤 Author & Contact
+
+Jamal El Hizazi
+
+· GitHub: @elhizazi1
+· Email: jamal@elhizazi.me
+· Website: Siwane.xyz
+
+For support or questions, open an issue on the repository or reach out via email.
+
+---
+
+<p align="center">
+  Made with ❤️ for the Android community
+</p>
