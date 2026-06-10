@@ -1,19 +1,19 @@
 # Shizu CoreFetch
 
 <p align="center">
-  <img src="assets/favicon.png" alt="Shizu CoreFetch Icon" width="120"/>
+ <img src="assets/favicon.png" alt="Shizu CoreFetch Icon" width="120"/>
 </p>
 
 <p align="center">
-  <strong>An advanced, Shizuku-powered application hub for Android.</strong><br>
-  Fetch, manage, and silently update your apps with system-level privileges — entirely open source.
+ <strong>An advanced, Shizuku-powered application hub for Android.</strong><br>
+ Fetch, manage, and silently update your apps with system-level privileges — entirely open source.
 </p>
 
 <p align="center">
-  <a href="https://github.com/elhizazi1/ShizuCoreFetch/releases/latest"><img src="https://img.shields.io/github/v/release/elhizazi1/ShizuCoreFetch?label=Latest%20Release&style=flat-square" alt="Release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square" alt="License"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Platform-Android-6A1B9A?style=flat-square&logo=android" alt="Platform"></a>
-  <a href="https://github.com/elhizazi1/ShizuCoreFetch"><img src="https://img.shields.io/github/stars/elhizazi1/ShizuCoreFetch?style=flat-square" alt="Stars"></a>
+ <a href="https://github.com/elhizazi1/ShizuCoreFetch/releases/latest"><img src="https://img.shields.io/github/v/release/elhizazi1/ShizuCoreFetch?label=Latest%20Release&style=flat-square" alt="Release"></a>
+ <a href="LICENSE"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat-square" alt="License"></a>
+ <a href="#"><img src="https://img.shields.io/badge/Platform-Android-6A1B9A?style=flat-square&logo=android" alt="Platform"></a>
+ <a href="https://github.com/elhizazi1/ShizuCoreFetch"><img src="https://img.shields.io/github/stars/elhizazi1/ShizuCoreFetch?style=flat-square" alt="Stars"></a>
 </p>
 
 ---
@@ -32,29 +32,22 @@
 
 ## ✨ Key Features
 
-- **Silent Operations with Shizuku** Install, uninstall, and update apps directly at system level — no user interaction needed once permissions are granted.
-
-- **Centralized Repository** Browse and fetch applications from a curated repository. Each app includes screenshots, description, developer info, and version history.
-
-- **Local Storage Wallet** Store downloaded APKs locally, share them via any app, or open them with external file viewers. Delete packages with a single tap to free up space.
-
-- **Update Notifications** Receive alerts when new versions of your installed apps become available. Background checks ensure you never miss an update.
-
-- **GitHub Integration** Sign in with your GitHub account or continue as a guest. Your installed apps and update status are tied to your profile (optional).
-
-- **Multi‑Language** Available in 9 languages: العربية, English, Français, Español, Português, Русский, हिन्दी, 中文, 日本語.
-
-- **Dynamic Theming** Switch between Light, Dark, and System‑follow modes on the fly.
-
-- **Privacy First** 100% offline‑first architecture. No tracking, no analytics, no data collection. Your apps and data stay on your device.
+- **Silent Operations with Shizuku:** Install, uninstall, and update apps directly at system level — no user interaction needed once permissions are granted.
+- **Centralized Repository:** Browse and fetch applications from a curated repository. Each app includes screenshots, description, developer info, and version history.
+- **Local Storage Wallet:** Store downloaded APKs locally, share them via any app, or open them with external file viewers. Delete packages with a single tap to free up space.
+- **Update Notifications:** Receive alerts when new versions of your installed apps become available. Background checks ensure you never miss an update.
+- **GitHub Integration:** Sign in with your GitHub account or continue as a guest. Your installed apps and update status are tied to your profile (optional).
+- **Multi‑Language:** Available in 9 languages: العربية, English, Français, Español, Português, Русский, हिन्दी, 中文, 日本語.
+- **Dynamic Theming:** Switch between Light, Dark, and System‑follow modes on the fly.
+- **Privacy First:** 100% offline‑first architecture. No tracking, no analytics, no data collection. Your apps and data stay on your device.
 
 ---
 
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="assets/screen/screen1.png" width="180">
-  <img src="assets/screen/screen2.png" width="180">
+ <img src="assets/screen/screen1.png" width="180">
+ <img src="assets/screen/screen2.png" width="180">
 </p>
 
 ---
@@ -90,15 +83,20 @@ Shizu CoreFetch uses the Shizuku Binder API to execute privileged commands direc
 
 The app itself runs without root, making it safe and compliant with modern Android security policies.
 
-
+```mermaid
 graph LR
-    A[User Action] --> B{Shizuku Service}
-    B -- Binder IPC --> C[System Server]
-    C --> D[Package Manager]
-    D --> E[Install/Uninstall/Update]
+   A[User Action] --> B{Shizuku Service}
+   B -- Binder IPC --> C[System Server]
+   C --> D[Package Manager]
+   D --> E[Install/Uninstall/Update]
+```
+
+---
 
 ## 🌍 Localization
+
 All user‑facing strings are translated into the following languages:
+
 | Language | Status |
 |---|---|
 | العربية (Arabic) | ✅ Complete |
@@ -114,34 +112,42 @@ All user‑facing strings are translated into the following languages:
 ---
 
 ## 🛠️ Tech Stack
- * **Language:** Kotlin
- * **UI Architecture:** XML Layouts + ViewBinding + Material Design 3 Components
- * **Networking:** Retrofit 2 + OkHttp + Java HttpURLConnection (for direct GitHub REST API operations)
- * **Local Caching & Storage:** SharedPreferences Architecture (via custom managers)
- * **Concurrency:** Native Kotlin Threads + Android Main Looper Handlers
- * **Rich Text Rendering:** Markwon Markdown Library (for Readme displaying)
- * **Image Loading:** Coil (with custom rounded corner transformations)
- * **Cloud Backend:** Google Apps Script + Google Sheets API (for central catalog and blacklists)
- * **Build System:** Gradle
- 
+
+- **Language:** Kotlin
+- **UI Architecture:** XML Layouts + ViewBinding + Material Design 3 Components
+- **Networking:** Retrofit 2 + OkHttp + Java HttpURLConnection (for direct GitHub REST API operations)
+- **Local Caching & Storage:** SharedPreferences Architecture (via custom managers)
+- **Concurrency:** Native Kotlin Threads + Android Main Looper Handlers
+- **Rich Text Rendering:** Markwon Markdown Library (for Readme displaying)
+- **Image Loading:** Coil (with custom rounded corner transformations)
+- **Cloud Backend:** Google Apps Script + Google Sheets API (for central catalog and blacklists)
+- **Build System:** Gradle
+
 ---
- 
-🤝 Contributing
+
+## 🤝 Contributing
+
 We welcome contributions! If you’d like to improve Shizu CoreFetch, please follow these steps:
- 1. Fork the repo
- 2. Create a feature branch (git checkout -b feature/amazing-feature)
- 3. Commit your changes (git commit -m 'Add amazing feature')
- 4. Push to the branch (git push origin feature/amazing-feature)
- 5. Open a Pull Request
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 Read the full Contribution Guidelines for details on coding conventions and localization.
 
+---
 
 ## Acknowledgments & Design Assets
-The user interface of Shizu CoreFetch relies on clean and professional iconography. The icons used throughout the application are sourced from the **Iconsax** library. To ensure optimal performance, crisp scaling across all screen densities, and memory efficiency on Android, all utilized icons were converted from their original formats into native Android Vector Drawable (XML) formats.
 
+The user interface of Shizu CoreFetch relies on clean and professional iconography. The icons used throughout the application are sourced from the **[Iconsax](https://github.com/glenthemes/iconsax/tree/gh-pages)** library. To ensure optimal performance, crisp scaling across all screen densities, and memory efficiency on Android, all utilized icons were converted from their original formats into native Android Vector Drawable (XML) formats.
+
+---
 
 ## 📜 License
-This project is licensed under the GNU General Public License v3.0 – see the LICENSE file for details.
+
+This project is licensed under the GNU General Public License v3.0 – see the [LICENSE](LICENSE) file for details.
 
 ---
 
@@ -160,4 +166,3 @@ For support or questions, open an issue on the repository or reach out via email
 <p align="center">
 Made with ❤️ for the Android community
 </p>
-
