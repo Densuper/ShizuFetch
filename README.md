@@ -1,5 +1,3 @@
-## أولاً: ملف README.md الجديد (محدث بالكامل لنسخه ولصقه)
-
 # Shizu CoreFetch
 
 <p align="center">
