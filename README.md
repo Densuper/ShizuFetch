@@ -151,6 +151,13 @@ This project is licensed under the GNU General Public License v3.0 – see the [
 
 ---
 
+For complete documentation on every field, locale, and best practice, visit the official Shizu CoreFetch docs here:  
+**[https://docshizu.siwane.xyz/](https://docshizu.siwane.xyz/)**
+
+You don't need to send anything or register. Just add a valid `shizu_store.json` file at the root of your repository, and the store will automatically display your app professionally, with localized descriptions and seamless support for your own ads.
+
+---
+
 ## 👤 Author & Contact
 
 **Jamal El Hizazi**
