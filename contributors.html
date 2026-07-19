@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributors - Shizu CoreFetch</title>
+    <!-- استدعاء خط جوجل العصري Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* الإعدادات الأساسية والتصميم العام */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #3b82f6;
+            --accent-hover: #2563eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* تصميم قسم الترويسة (Header) */
+        header {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .app-name {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        p.subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* شبكة البطاقات (Grid System) */
+        .contributors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        /* تصميم بطاقة المساهم (Card) */
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* صورة المساهم المستدعاة من جيتهب */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--accent-color);
+            padding: 3px;
+            background-color: var(--bg-color);
+        }
+
+        .name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            display: inline-block;
+            background-color: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        /* زر زيارة حساب جيتهب */
+        .github-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--text-secondary);
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .github-btn:hover {
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            border-color: var(--text-primary);
+        }
+
+        /* دعوة للمساهمة في الأسفل */
+        .contribute-cta {
+            margin-top: 60px;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(145deg, var(--card-bg), rgba(30, 41, 59, 0.5));
+            border-radius: 16px;
+            max-width: 600px;
+            width: 100%;
+            border: 1px dashed var(--text-secondary);
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+
+        .contribute-cta h3 {
+            margin-bottom: 10px;
+        }
+        
+        .contribute-cta a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contribute-cta a:hover {
+            text-decoration: underline;
+        }
+
+        /* حركات الظهور (Animations) */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* توافق الشاشات الصغيرة */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .contributors-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="app-name">Shizu CoreFetch</span>
+        <h1>Special Thanks</h1>
+        <p class="subtitle">We extend our deepest gratitude to the amazing contributors who helped translate the app and make it accessible to everyone around the world.</p>
+    </header>
+
+    <main class="contributors-grid">
+        
+        <!-- المساهم الأول: التشيكية -->
+        <div class="card">
+            <!-- لاحظ كيف نستخدم اسم المستخدم لجلب الصورة مباشرة -->
+            <img src="https://github.com/kouzelnik3.png" alt="Jakub K." class="avatar">
+            <h3 class="name">Jakub K.</h3>
+            <span class="role">Czech Translation (cs)</span>
+            <a href="https://github.com/kouzelnik3" target="_blank" class="github-btn">GitHub Profile</a>
+        </div>
+
+        <!-- المساهم الثاني: التركية -->
+        <div class="card">
+            <img src="https://github.com/AhmetCanArslan.png" alt="AhmetCanArslan" class="avatar">
+            <h3 class="name">AhmetCanArslan</h3>
+            <span class="role">Turkish Translation (tr)</span>
+            <a href="https://github.com/AhmetCanArslan" target="_blank" class="github-btn">GitHub Profile</a>
+        </div>
+
+        <!-- يمكنك نسخ أي بطاقة ولصقها هنا مستقبلاً لإضافة مترجمين جدد -->
+
+    </main>
+
+    <div class="contribute-cta">
+        <h3>Want to see the app in your language?</h3>
+        <p>You can help us translate Shizu CoreFetch! Visit our <a href="https://github.com/YourUsername/ShizuCoreFetch" target="_blank">GitHub Repository</a> to contribute.</p>
+    </div>
+
+</body>
+</html>
