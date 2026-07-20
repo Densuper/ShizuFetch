@@ -138,7 +138,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val uri = intent.data
-        if (uri != null && uri.scheme == "shizufetch") {
+        if (uri != null && uri.scheme == "shizucorefetch") {
             val code = uri.getQueryParameter("code")
             if (code != null) {
                 binding.btnLoginGithub.isEnabled = false
