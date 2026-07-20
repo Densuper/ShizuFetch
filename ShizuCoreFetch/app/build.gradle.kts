@@ -8,7 +8,6 @@ plugins {
 android {
     namespace = "xyz.densuper.shizufetch"
     compileSdk = 35
-    ndkVersion = "28.2.13676358"
     
     defaultConfig {
         applicationId = "xyz.densuper.shizufetch"
@@ -19,14 +18,6 @@ android {
         
         vectorDrawables { 
             useSupportLibrary = true
-        }
-        
-        // ملاحظة: إذا لم تكن تنوي كتابة أكواد C/C++ في هذا التطبيق، 
-        // يمكنك إزالة قسم externalNativeBuild لتسريع عملية البناء (Build) بشكل كبير في AndroidIDE.
-        externalNativeBuild {
-            ndkBuild {
-                abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86_64", "x86"))
-            }
         }
     }
     
@@ -39,12 +30,6 @@ android {
         release {
             isMinifyEnabled = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
-    }
-    
-    externalNativeBuild {
-        ndkBuild {
-            path = file("src/main/jni/Android.mk")
         }
     }
     
