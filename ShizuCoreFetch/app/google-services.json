@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "199147568410",
-    "project_id": "shizucorefetch",
-    "storage_bucket": "shizucorefetch.firebasestorage.app"
+    "project_id": "ShizuFetch",
+    "storage_bucket": "ShizuFetch.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:199147568410:android:65380e6d604db2be9540a3",
         "android_client_info": {
-          "package_name": "xyz.siwane.shizucorefetch"
+          "package_name": "xyz.densuper.shizufetch"
         }
       },
       "oauth_client": [],
@@ -27,3 +27,5 @@
   ],
   "configuration_version": "1"
 }
+
+

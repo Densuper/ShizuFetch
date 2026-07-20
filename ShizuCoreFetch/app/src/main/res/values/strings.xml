@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- النصوص الأساسية -->
-    <string name="app_name">Shizu CoreFetch</string>
-    <string name="main_title">Shizu CoreFetch</string>
+    <string name="app_name">ShizuFetch</string>
+    <string name="main_title">ShizuFetch</string>
     <string name="main_description">An advanced centralized platform for fetching and managing applications requiring core permissions.</string>
     <string name="main_login_github">Login with GitHub</string>
     <string name="main_boredom_title">Developer Window</string>
@@ -121,3 +121,4 @@
     <string name="dialog_confirm">Confirm</string>
 
 </resources>
+

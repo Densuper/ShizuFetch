@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Temel metinler -->
-    <string name="app_name">Shizu CoreFetch</string>
-    <string name="main_title">Shizu CoreFetch</string>
+    <string name="app_name">ShizuFetch</string>
+    <string name="main_title">ShizuFetch</string>
     <string name="main_description">Temel izinler gerektiren uygulamaları getirmek ve yönetmek için gelişmiş merkezi bir platform.</string>
     <string name="main_login_github">GitHub ile Giriş Yap</string>
     <string name="main_boredom_title">Geliştirici Penceresi</string>
@@ -121,3 +121,4 @@
     <string name="dialog_confirm">Onayla</string>
 
 </resources>
+

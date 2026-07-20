@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- 基本テキスト -->
-    <string name="app_name">Shizu CoreFetch</string>
-    <string name="main_title">Shizu CoreFetch</string>
+    <string name="app_name">ShizuFetch</string>
+    <string name="main_title">ShizuFetch</string>
     <string name="main_description">コア権限が必要なアプリケーションを取得・管理するための高度な集中プラットフォーム。</string>
     <string name="main_login_github">GitHubでログイン</string>
     <string name="main_boredom_title">開発者ウィンドウ</string>

@@ -3,7 +3,7 @@
 #include "tomaslib.h"
 
 extern "C" JNIEXPORT jstring JNICALL
-Java_xyz_siwane_shizucorefetch_MainActivity_stringFromJNI(
+Java_xyz.densuper.shizufetch_MainActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
     std::string hello = "Hello from TomasLib C++";
@@ -11,7 +11,7 @@ Java_xyz_siwane_shizucorefetch_MainActivity_stringFromJNI(
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_xyz_siwane_shizucorefetch_MainActivity_addNumbers(
+Java_xyz.densuper.shizufetch_MainActivity_addNumbers(
         JNIEnv* env,
         jobject /* this */,
         jint a,
@@ -20,7 +20,7 @@ Java_xyz_siwane_shizucorefetch_MainActivity_addNumbers(
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_xyz_siwane_shizucorefetch_MainActivity_initTomasLib(
+Java_xyz.densuper.shizufetch_MainActivity_initTomasLib(
         JNIEnv* env,
         jobject /* this */) {
     // Initialize TomasLib native library

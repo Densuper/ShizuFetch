@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- मुख्य पाठ -->
-    <string name="app_name">Shizu CoreFetch</string>
-    <string name="main_title">Shizu CoreFetch</string>
+    <string name="app_name">ShizuFetch</string>
+    <string name="main_title">ShizuFetch</string>
     <string name="main_description">कोर (मूल) अनुमतियों की आवश्यकता वाले एप्लिकेशन प्राप्त करने और प्रबंधित करने के लिए एक उन्नत केंद्रीकृत मंच।</string>
     <string name="main_login_github">GitHub के साथ लॉगिन करें</string>
     <string name="main_boredom_title">डेवलपर विंडो</string>
@@ -121,3 +121,4 @@
 <string name="dialog_confirm">पुष्टि करें</string>
 
 </resources>
+

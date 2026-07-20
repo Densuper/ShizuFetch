@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "xyz.siwane.shizucorefetch"
+    namespace = "xyz.densuper.shizufetch"
     compileSdk = 35
     ndkVersion = "28.2.13676358"
     
     defaultConfig {
-        applicationId = "xyz.siwane.shizucorefetch"
+        applicationId = "xyz.densuper.shizufetch"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -92,3 +92,4 @@ dependencies {
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
     
 }
+

@@ -14,6 +14,6 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "ShizuCoreFetch"
+rootProject.name = "ShizuFetch"
 
 include(":app")

@@ -25,8 +25,8 @@
 # ==========================================
 
 # 1. حماية كلاسات البيانات الخاصة بك (مهم جداً لمنع الانهيار بعد تسجيل الدخول)
--keep class xyz.siwane.shizucorefetch.AppModel { *; }
--keep class xyz.siwane.shizucorefetch.LocalApkModel { *; }
+-keep class xyz.densuper.shizufetch.AppModel { *; }
+-keep class xyz.densuper.shizufetch.LocalApkModel { *; }
 
 # 2. حماية مكتبة جلب البيانات (Retrofit & OkHttp)
 -dontwarn retrofit2.**
@@ -47,3 +47,4 @@
 
 # 5. حماية محرك التطبيق الأساسي (Shizuku)
 -keep class rikka.shizuku.** { *; }
+
