@@ -7,6 +7,6 @@ object Constants {
     // ضع Client ID الخاص بتطبيق جيتهاب هنا
     const val GITHUB_CLIENT_ID = "Ov23liLCIpJ2DnLo2wCc"
     
-    const val GITHUB_REDIRECT_URI = "shizucorefetch://callback"
+    const val GITHUB_REDIRECT_URI = "shizufetch://callback"
 }
 
