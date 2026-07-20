@@ -16,6 +16,17 @@
  <a href="https://github.com/elhizazi1/ShizuCoreFetch"><img src="https://img.shields.io/github/stars/elhizazi1/ShizuCoreFetch?style=flat-square" alt="Stars"></a>
 </p>
 
+# Shizu CoreFetch
+
+[![Telegram Channel](https://img.shields.io/badge/Telegram-Join%20Channel-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/shizucorefetch)
+
+---
+
+# Shizu CoreFetch
+
+📢 **Stay Updated:** [Join our official Telegram Channel](https://t.me/shizucorefetch) for the latest updates, releases, and direct support.
+
+<!-- باقي وصف المشروع الخاص بك هنا -->
 ---
 
 ## 📖 Overview
